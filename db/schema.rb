@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150606214216) do
+ActiveRecord::Schema.define(version: 20150606233652) do
 
   create_table "asthma_emergency_departments", force: :cascade do |t|
     t.string   "zipcode"
@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20150606214216) do
     t.integer  "visits"
     t.decimal  "age_adjusted_rate"
     t.integer  "county_fips_code"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+    t.decimal  "longitude",                  precision: 15, scale: 10
+    t.decimal  "latitude",                   precision: 15, scale: 10
   end
 
 end

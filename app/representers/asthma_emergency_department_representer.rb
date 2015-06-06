@@ -14,4 +14,9 @@ module AsthmaEmergencyDepartmentRepresenter
   property :visits, as: :count_visits_all
   property :age_adjusted_rate, as: :adjrate_kids
   property :county_fips_code, as: :cnty_fips
+
+  nested :zipcode do
+    property :longitude
+    property :latitude
+  end
 end
